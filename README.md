@@ -77,3 +77,13 @@ The gateway picks the right tool and fills the arguments automatically.
 ## License
 
 MIT
+
+## No MCP client? Call it over HTTP
+
+```bash
+curl -X POST https://gateway.pipeworx.io/v1/tools/apology_generate \
+  -H 'Content-Type: application/json' \
+  -d '{"offense":"I forgot your birthday and didn'\''t call until a week later","relationship":"partner","sincerity":"genuine","medium":"in_person"}'
+```
+
+No account needed for the first calls. Inspect any tool: `GET https://gateway.pipeworx.io/v1/tools/apology_generate`. Find one: `POST https://gateway.pipeworx.io/v1/tools/search_packs` with `{"query":"..."}`.
